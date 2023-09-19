@@ -1,6 +1,12 @@
 group 'com.flutter.logs.plogs.flutter_logs'
 version '1.0-SNAPSHOT'
 
+сonfigurations.all {
+    resolutionStrategy.dependencySubstitution {
+        substitute module('com.github.eclipse:paho.mqtt.android:1.0.20') with module('com.github.konturio:paho.mqtt.android:1.0.20')
+    }
+}
+
 buildscript {
     ext.kotlin_version = '1.7.10'
     repositories {
